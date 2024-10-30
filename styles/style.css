@@ -9,15 +9,28 @@ body {
   align-items: center;
   justify-content: space-around;
   font-weight: normal;
-  background-color: #fff; /*потом переместить*/
+  background-color: #fff; /*потом убрать*/
 }
+
 
 .header__menu-list {
   display: flex;
-  list-style-type: none;
+  list-style-type: circle;
   justify-content: flex-start;
   align-items: center;
-  gap: 5px;
+  gap: 28px;
+}
+
+.header__menu-item_active {
+  text-decoration: underline;
+}
+
+.header__menu-item_no-bullit {
+  list-style-type: none;
+}
+
+.a {
+  text-decoration: none;
 }
 
 .header__logo {
@@ -28,7 +41,7 @@ body {
   height: 105px;
 }
 
-.header__logo-image{
+.header__logo-image {
   width: unset;
   aspect-ratio: 130/105;
   max-height: 100%;
@@ -39,12 +52,67 @@ body {
   flex-direction: column;
 }
 
-.address {
+.cover {
+  padding: 165px 50px 50px;
+  background-color: #fff; /*потом убрать */
+  background-image: url(/images/cover.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  row-gap: 2px;
+  gap: 135px;
+  color: #fff;
 }
 
-.address__item-place {
-  text-decoration: none;
+.cover__title {
+  font-size: 100px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.aligned-text {
+  display: flex;
+}
+
+.text_start {
+  justify-content: start;
+}
+.text_center {
+  justify-content: center;
+}
+
+.text_right {
+  justify-content: end;
+}
+
+.spaced-0 {
+  letter-spacing: 0px;
+}
+
+.spaced-30 {
+  letter-spacing: 30px;
+}
+
+.spaced-60 {
+  letter-spacing: 60px;
+}
+
+.cover__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cover__description-text {
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.bet-button {
+  padding: 12px 32px;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: transparent;
+  border: #fff, solid, 2px;
 }
