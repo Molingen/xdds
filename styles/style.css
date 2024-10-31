@@ -58,6 +58,7 @@ body {
   background-image: url(/images/cover.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   flex-direction: column;
   gap: 135px;
@@ -101,11 +102,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 22px;
 }
 
 .cover__description-text {
   font-size: 22px;
   text-transform: uppercase;
+  word-spacing: 26px;
 }
 
 .bet-button {
@@ -115,4 +118,90 @@ body {
   color: #fff;
   background-color: transparent;
   border: #fff, solid, 2px;
+}
+
+.lots {
+  background-color: #fff; /*потом убрать*/
+  padding: 180px 24px 145px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.lots__heading {
+  font-size: 40px;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+  padding-left: 40px;
+}
+
+.lots__card-list {
+  display: flex;
+  list-style-type: none;
+  gap:25px;
+}
+
+.lots__card-list-item {
+  min-height: 563px;
+  flex-basis: 334px;
+  flex-grow: 1;
+}
+
+.card-link {
+  text-decoration: none;
+  color:#fff;
+  display: block;
+  height: 100%;
+}
+
+.card {
+  background-color: #dd9ae6;
+  padding: 50px 40px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card_type_film {
+  background-image: url(/images/card-lot-01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.card_type_book {
+  background-image: url(/images/card-lot-02.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.card_type_picture {
+  background-image: url(/images/card-lot-03.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.card__title {
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-transform: uppercase;
+  line-height: 120%;
+}
+
+.card__text {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 120%;
+}
+
+.lots__look-more-link {
+  color: #000;
+  font-size: 20px;
+  font-weight: normal;
+  padding-left: 40px;
 }
