@@ -4,14 +4,14 @@ body {
 
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 92px 24px 96px;
+  padding: 92px 50px 96px;
   font-weight: normal;
   font-size: 18px;
   background-color: #fff;
+  position: relative;
 }
-
 
 .header__menu-list {
   display: flex;
@@ -39,6 +39,8 @@ body {
   align-items: center;
   width: 148px;
   height: 105px;
+  position: absolute;
+  left: calc(50% - 74px);
 }
 
 .header__logo-image {
@@ -53,11 +55,12 @@ body {
 }
 
 .address__item-place {
-  text-decoration: none;
   font-size: 18px;
+  text-decoration: none;
 }
 
 .cover {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 135px;
@@ -69,10 +72,29 @@ body {
   background-size: cover;
 }
 
+.cover::before {
+  content: '';
+  position: absolute;
+  top:0; left:0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.cover > * {
+   z-index: 1;
+}
+
 .cover__title {
   font-weight: bold;
   font-size: 100px;
   text-transform: uppercase;
+}
+
+.cover__title > span:nth-child(2) {
+  position: relative;
+  right: 25px;
 }
 
 .aligned-text {
@@ -210,11 +232,11 @@ body {
 }
 
 .about {
-  background-color: #fff;
-  padding: 0 24px 180px;
   display: grid;
   grid-template-columns: 334px 2fr;
   grid-template-rows: 595px;
+  padding: 0 24px 180px;
+  background-color: #fff;
 }
 
 .about__column-left {
@@ -227,10 +249,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000;
-  height: 240px;
   width: 240px;
+  height: 240px;
   border-radius: 50%;
+  background-color: #000;
 }
 
 .about__logo-image {
@@ -240,44 +262,44 @@ body {
 .about__column-right {
   display: flex;
   flex-direction: column;
-  padding-top: 136px;
   gap: 100px;
+  padding-top: 136px;
 }
 
 .about__title {
+  font-weight: bold;
   font-size: 40px;
   text-transform: uppercase;
-  font-weight: bold;
 }
 
 .about__text {
-   font-size: 20px;
-   font-weight: normal;
-   line-height: 24px;
    display: flex;
    flex-direction: column;
    gap: 24px;
+   font-weight: normal;
+   font-size: 20px;
+   line-height: 24px;
 }
 
 .footer {
-  padding: 0 50px 88px;
-  background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: start;
+  padding: 0 50px 88px;
+  background-color: #fff;
 }
 
 .footer__address {
-   font-size: 18px;
    display: flex;
    flex-direction: column;
+   font-size: 18px;
 }
 
 .footer__menu-list {
-  list-style-type: none;
-  font-size: 18px;
   font-weight: normal;
+  font-size: 18px;
   text-align: center;
+  list-style-type: none;
 }
 
 .footer__menu-link_active {
